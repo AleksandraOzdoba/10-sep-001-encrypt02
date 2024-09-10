@@ -12,8 +12,6 @@ jobs:
 before_install:
 - openssl aes-256-cbc -K $encrypted_ae37620e7317_key -iv $encrypted_ae37620e7317_iv
   -in super_secret_4.txt.enc -out super_secret_4.txt -d
-- openssl aes-256-cbc -K $encrypted_714b019ccabf_key -iv $encrypted_714b019ccabf_iv
-  -in super_secret_3.txt.enc -out super_secret_3.txt -d - e https://staging-qe.travis-ci.com/
 after_success:
 - echo done > test.txt
 - echo $MY_SECRET_VAR
