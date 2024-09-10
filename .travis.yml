@@ -1,26 +1,29 @@
 os: linux
 language: java
 services:
-  - docker
+- docker
 cache: bundler
 dist: focal
 install: skip
 jobs:
   include:
-    - name: failing
-      script: true
+  - name: failing
+    script: true
 before_install:
-  - openssl aes-256-cbc -K $encrypted_355e94ba1091_key -iv $encrypted_355e94ba1091_iv -in super_secret.txt.enc -out super_secret.txt -d
+- openssl aes-256-cbc -K $encrypted_714b019ccabf_key -iv $encrypted_714b019ccabf_iv
+  -in super_secret_3.txt.enc -out super_secret_3.txt -d
+- openssl aes-256-cbc -K $encrypted_355e94ba1091_key -iv $encrypted_355e94ba1091_iv
+  -in super_secret.txt.enc -out super_secret.txt -d
 after_success:
-  - echo done > test.txt
-  - echo $MY_SECRET_VAR
-  - echo $MY_SECRET_VAR >> test.txt
-  - cat test.txt
+- echo done > test.txt
+- echo $MY_SECRET_VAR
+- echo $MY_SECRET_VAR >> test.txt
+- cat test.txt
 after_failure:
-  - echo failed > test.txt
-  - echo $MY_SECRET_VAR
-  - echo $MY_SECRET_VAR >> test.txt
-  - cat test.txt
+- echo failed > test.txt
+- echo $MY_SECRET_VAR
+- echo $MY_SECRET_VAR >> test.txt
+- cat test.txt
 env:
   global:
-    secure: $MY_SECRET_VAR
+    secure: "$MY_SECRET_VAR"
