@@ -23,4 +23,4 @@ env:
   global:
     secure: XrNcxCWmYVDBWUomxG/dsluT3gJh382xfesFVk+SNwYuNFDHfPyKMNHdgxN+OELB/SgA9hf4OE6hhIZ93KRae0ePAc7rK3z5HrZOmoNDSe76wggdEBpqlACZuOD5K2G9o6s8VSMjGltJFhnKoc7OtFsvbgb5zNH+dCEUFAR85qT5KYBmgeOEpbpVBy2rSHLaOclKYQ//rkpNI9bPEb4ZuhSFmFIsNKMYbOiXCuUNpd4i3b7xXk1mGTKnlOxj97sKhrG3/dalE9vlTnpwBgGBZg5313DcKHHBiiFM4SmsM5yXWDM9Qt9zUBv0bOSr81jz/wpOTOFHmKiJoLHFGhToG6txUvJP/gLTAIBAsZlPYqUiDd5SWJNGnaJdhmmmdK+5zA6/EpItW3CdpOyJcSBWV7IzvjMdvgnizES8G7b5RJmDvdUB5bHO5/9hmKe3aXGr4nVIpgY43td4lUh2T8g2I2CKDOdkwTTZA3OKFEafTEceuUFCnktRGT70GtZUXtlLa6suiFrjMcifemJIjzsyxlppAU/QDmUNBmviYI5dbLywsXarg2CUGgWogEi2dBmWTpJ6kj3Lkqfd6vxoHGEUDv6mrq7+hWI1Kk/TNS4DbYuMAUrJIH2a99tACKRo8QMbSuSsiwWNCDdbJ1aw4djG1I9ImAha79lyDowPX0V9mHc=
 before_install:
-  - openssl aes-256-cbc -K $encrypted_0a6446eb3ae3_key -iv $encrypted_0a6446eb3ae3_iv -in super_secret.txt.enc -out super_secret.txt -d
+  - openssl aes-256-cbc -K $encrypted_355e94ba1091_key -iv $encrypted_355e94ba1091_iv -in super_secret.txt.enc -out super_secret.txt -d
